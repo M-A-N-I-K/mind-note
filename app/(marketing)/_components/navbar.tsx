@@ -1,7 +1,9 @@
 "use client";
 import useScrollTop from "@/hooks/use-scroll-top";
 import { useConvexAuth } from "convex/react";
-import { SignInButton } from "@clerk/clerk-react";
+import Link from "next/link";
+import { SignInButton, UserButton } from "@clerk/clerk-react";
+
 import { ModeToggle } from "@/components/modeToggle";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
@@ -31,6 +33,14 @@ export const Navbar = () => {
 						<SignInButton mode="modal">
 							<Button size="sm">Get Motion Free</Button>
 						</SignInButton>
+					</>
+				)}
+				{isAuthenticated && !isLoading && (
+					<>
+						<Button variant="ghost" size="sm" asChild>
+							<Link href="/documents">Enter Motion</Link>
+						</Button>
+						<UserButton afterSignOutUrl="/" />
 					</>
 				)}
 				<ModeToggle />
