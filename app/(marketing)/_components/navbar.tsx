@@ -6,6 +6,7 @@ import { ModeToggle } from "@/components/modeToggle";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { Button } from "@/components/ui/button";
+import { Spinner } from "@/components/spinnes";
 
 export const Navbar = () => {
 	const { isAuthenticated, isLoading } = useConvexAuth();
@@ -19,7 +20,7 @@ export const Navbar = () => {
 		>
 			<Logo />
 			<div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
-				{isLoading && <p>Loading...</p>}
+				{isLoading && <Spinner />}
 				{!isAuthenticated && !isLoading && (
 					<>
 						<SignInButton mode="modal">
