@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { SignInButton } from "@clerk/clerk-react";
 
-import { Spinner } from "@/components/spinnes";
+import { Spinner } from "@/components/spinner";
 import { Button } from "@/components/ui/button";
 
 export const Heading = () => {
