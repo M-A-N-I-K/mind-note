@@ -3,10 +3,27 @@
 import Image from "next/image";
 import { useUser } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
+
 import { PlusCircle } from "lucide-react";
+import { useMutation } from "convex/react";
+
+import { api } from "@/convex/_generated/api";
 
 const DocumentsPage = () => {
 	const { user } = useUser();
+	const create = useMutation(api.documents.create);
+
+	const onCreate = async () => {
+		const promise = create({ title: "Untitled" });
+
+		toast.promise(promise, {
+			loading: "Creating a new note...",
+			success: "New Note created",
+			error: "Failed to create a new note",
+		});
+	};
+
 	return (
 		<div className="h-full flex flex-col items-center justify-center space-y-4">
 			<Image
@@ -26,7 +43,7 @@ const DocumentsPage = () => {
 			<h2 className="text-lg font-md">
 				Welcome {user?.fullName}&apos;s Motion
 			</h2>
-			<Button>
+			<Button onClick={onCreate}>
 				<PlusCircle className="mr-2 h-4 w-4" />
 				Create a note
 			</Button>
