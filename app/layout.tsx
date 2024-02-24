@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Motion",
+	title: "Notion",
 	description: "Connected Workspace where everyone can collaborate.",
 	icons: {
 		icon: [
@@ -40,7 +40,7 @@ export default function RootLayout({
 						defaultTheme="system"
 						enableSystem
 						disableTransitionOnChange
-						storageKey="motion-theme"
+						storageKey="notion-theme"
 					>
 						<Toaster position="bottom-center" />
 						{children}

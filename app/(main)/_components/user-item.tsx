@@ -13,7 +13,7 @@ import {
 	DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
 
-const Useritem = () => {
+export const Useritem = () => {
 	const { user } = useUser();
 	return (
 		<DropdownMenu>
@@ -62,5 +62,3 @@ const Useritem = () => {
 		</DropdownMenu>
 	);
 };
-
-export default Useritem;
