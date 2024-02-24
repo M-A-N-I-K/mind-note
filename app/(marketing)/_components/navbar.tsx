@@ -31,14 +31,14 @@ export const Navbar = () => {
 							</Button>
 						</SignInButton>
 						<SignInButton mode="modal">
-							<Button size="sm">Get Motion Free</Button>
+							<Button size="sm">Get Notion Free</Button>
 						</SignInButton>
 					</>
 				)}
 				{isAuthenticated && !isLoading && (
 					<>
 						<Button variant="ghost" size="sm" asChild>
-							<Link href="/documents">Enter Motion</Link>
+							<Link href="/documents">Enter Notion</Link>
 						</Button>
 						<UserButton afterSignOutUrl="/" />
 					</>
