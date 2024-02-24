@@ -36,6 +36,7 @@ export const Item = ({
 	onClick,
 	icon: Icon,
 }: ItemProps) => {
+	console.log("Item Level", level);
 	const create = useMutation(api.documents.create);
 	const router = useRouter();
 	const handleExpand = (
@@ -72,7 +73,7 @@ export const Item = ({
 			onClick={onClick}
 			role="button"
 			style={{
-				paddingLeft: level ? `${level * 12 + 12}"px"` : "12px",
+				paddingLeft: level ? `${level * 12 + 12}px` : "12px",
 			}}
 			className={cn(
 				"group min-h-[27px] text-sm py-1 pr-3 w-full hover:bg-primary/5 flex items-center font-medium text-muted-foreground",
