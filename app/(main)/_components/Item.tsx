@@ -113,7 +113,7 @@ export const Item = ({
 			{!!id && (
 				<div
 					role="button"
-					className="h-full rounded-sm mr-1 hover:bg-neutral-300 dark:bg-neutral-600"
+					className="h-full rounded-sm mr-1 hover:bg-neutral-300 dark:hover:bg-neutral-600"
 					onClick={handleExpand}
 				>
 					<ChevronIcon className="shrink-0 h-4 w-4 text-muted-foreground/50" />
@@ -177,7 +177,7 @@ Item.Skeleton = function ItemSkeleton({ level }: { level?: number }) {
 	return (
 		<div
 			className="flex gap-x-2 py-[3px]"
-			style={{ paddingLeft: level ? `${level * 12 + 25}"px"` : "12px" }}
+			style={{ paddingLeft: level ? `${level * 12 + 25}px` : "12px" }}
 		>
 			<Skeleton className="h-4 w-4" />
 			<Skeleton className="h-4 w-[30%]" />
