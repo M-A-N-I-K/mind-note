@@ -12,7 +12,7 @@ import {
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import { useMutation } from "convex/react";
+import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 
 import { useRouter } from "next/navigation";
@@ -55,6 +55,7 @@ export const Item = ({
 	const router = useRouter();
 	const create = useMutation(api.documents.create);
 	const archive = useMutation(api.documents.archive);
+	const trash = useQuery(api.documents.getTrash);
 
 	const handleExpand = (
 		event: React.MouseEvent<HTMLDivElement, MouseEvent>

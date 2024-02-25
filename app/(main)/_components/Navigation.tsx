@@ -17,6 +17,7 @@ import { useMutation } from "convex/react";
 
 import { Useritem } from "./user-item";
 import { Item } from "./item";
+import { TrashBox } from "./trash-box";
 import { DocumentList } from "./document-list";
 
 import { cn } from "@/lib/utils";
@@ -165,7 +166,7 @@ export const Navigation = () => {
 							className="p-0 w-72"
 							side={isMobile ? "bottom" : "left"}
 						>
-							<p>Trash Box</p>
+							<TrashBox />
 						</PopoverContent>
 					</Popover>
 				</div>
