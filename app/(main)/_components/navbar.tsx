@@ -20,7 +20,11 @@ export const Navbar = ({ isCollapsed, resetWidth }: NavbarProps) => {
 	});
 
 	if (document === undefined) {
-		return <p>Loading</p>;
+		return (
+			<nav className="w-full bg-background dark:bg-[#1F1F1F] px-3 py-2 flex items-center">
+				<Title.Skeleton />
+			</nav>
+		);
 	}
 	if (document === null) {
 		return null;
