@@ -13,10 +13,10 @@ import { Menu } from "./menu";
 
 interface NavbarProps {
 	isCollapsed: boolean;
-	resetWidth: () => void;
+	onResetWidth: () => void;
 }
 
-export const Navbar = ({ isCollapsed, resetWidth }: NavbarProps) => {
+export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
 	const params = useParams();
 	const document = useQuery(api.documents.getById, {
 		documentId: params.documentId as Id<"documents">,
@@ -41,7 +41,7 @@ export const Navbar = ({ isCollapsed, resetWidth }: NavbarProps) => {
 				{isCollapsed && (
 					<MenuIcon
 						role="button"
-						onClick={resetWidth}
+						onClick={onResetWidth}
 						className="h-6 w-6 text-muted-foreground"
 					/>
 				)}

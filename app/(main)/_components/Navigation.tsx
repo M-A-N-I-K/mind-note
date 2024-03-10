@@ -49,7 +49,7 @@ export const Navigation = () => {
 		if (isMobile) {
 			collapse();
 		} else {
-			resetwidth();
+			resetWidth();
 		}
 	}, [isMobile]);
 
@@ -87,7 +87,7 @@ export const Navigation = () => {
 		}
 	};
 
-	const resetwidth = () => {
+	const resetWidth = () => {
 		if (sidebarRef.current && navbarRef.current) {
 			setIsCollapsed(false);
 			setIsResetting(true);
@@ -187,7 +187,7 @@ export const Navigation = () => {
 				</div>
 				<div
 					onMouseDown={handleMouseDown}
-					onClick={resetwidth}
+					onClick={resetWidth}
 					className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute bg-primary/10 top-0 right-0 h-full w-1"
 				/>
 			</aside>
@@ -199,17 +199,18 @@ export const Navigation = () => {
 					isMobile && "left-0 w-full"
 				)}
 			>
-				{!!params.documentId && (
-					<Navbar isCollapsed={isCollapsed} resetwidth={resetwidth} />
+				{!!params.documentId ? (
+					<Navbar isCollapsed={isCollapsed} onResetWidth={resetWidth} />
+				) : (
+					<nav className="bg-transparent px-3 py-2 w-full">
+						{isCollapsed && (
+							<MenuIcon
+								onClick={resetWidth}
+								className="w-6 h-6 cursor-pointer text-muted-foreground"
+							/>
+						)}
+					</nav>
 				)}
-				<nav className="bg-transparent px-3 py-2 w-full">
-					{isCollapsed && (
-						<MenuIcon
-							onClick={resetwidth}
-							className="w-6 h-6 cursor-pointer text-muted-foreground"
-						/>
-					)}
-				</nav>
 			</div>
 		</>
 	);
