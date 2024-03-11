@@ -74,6 +74,8 @@ export const Item = ({
 			success: "Note archived!",
 			error: "Failed to archive note",
 		});
+
+		router.push("/documents");
 	};
 
 	const onCreate = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -85,7 +87,7 @@ export const Item = ({
 				if (!expanded) {
 					onExpand?.();
 				}
-				// router.push(`/documents/${documentId}`);
+				router.push(`/documents/${documentId}`);
 			}
 		);
 
