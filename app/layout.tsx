@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ConvexClientProvider } from "../components/providers/convex-provider";
@@ -37,6 +38,17 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<Head>
+				<meta property="og:url" content="Canonical link preview URL" />
+				<meta
+					property="og:description"
+					content="Link preview description"
+				/>
+				<meta property="og:title" content="Link preview title" />
+				<meta property="og:image" content="Link preview image" />
+				<meta property="og:type" content="notion" />
+				<meta property="og:site_name" content="Notion Clone" />
+			</Head>
 			<body className={inter.className}>
 				<ConvexClientProvider>
 					<EdgeStoreProvider>
