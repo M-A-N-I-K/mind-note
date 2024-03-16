@@ -5,9 +5,14 @@ const es = initEdgeStore.create();
  * This is the main router for the Edge Store buckets.
  */
 const edgeStoreRouter = es.router({
-	publicFiles: es.fileBucket().beforeDelete(() => {
-		return true;
-	}),
+	publicFiles: es
+		.fileBucket()
+		.beforeUpload(() => {
+			return true;
+		})
+		.beforeDelete(() => {
+			return true;
+		}),
 });
 
 const handler = createEdgeStoreNextHandler({
