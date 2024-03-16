@@ -15,11 +15,11 @@ import { useMediaQuery } from "usehooks-ts";
 import { toast } from "sonner";
 import { useMutation } from "convex/react";
 
-import { Useritem } from "./user-item";
-import { Item } from "./item";
-import { TrashBox } from "./trash-box";
-import { DocumentList } from "./document-list";
-import { Navbar } from "./navbar";
+import { Useritem } from "../app/(main)/_components/user-item";
+import { Item } from "../app/(main)/_components/item";
+import { TrashBox } from "../app/(main)/_components/trash-box";
+import { DocumentList } from "../app/(main)/_components/document-list";
+import { Navbar } from "../app/(main)/_components/navbar";
 
 import { useSearch } from "@/hooks/use-search";
 import { cn } from "@/lib/utils";
