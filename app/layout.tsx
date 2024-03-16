@@ -36,7 +36,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" supressHydrationWarning>
+		<html lang="en" suppressHydrationWarning>
 			<body className={inter.className}>
 				<ConvexClientProvider>
 					<EdgeStoreProvider>
