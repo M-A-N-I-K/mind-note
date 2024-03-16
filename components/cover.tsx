@@ -24,9 +24,11 @@ export const Cover = ({ url, preview }: CoverImageProps) => {
 	const { edgestore } = useEdgeStore();
 
 	const onRemove = async () => {
-		await edgestore.publicFiles.delete({
-			url,
-		});
+		if (url) {
+			await edgestore.publicFiles.delete({
+				url,
+			});
+		}
 
 		await removeCoverImage({
 			id: params.documentId as Id<"documents">,
