@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">Notion Clone</h1>
+
+<p align="center"><img src="https://socialify.git.ci/M-A-N-I-K/notion-clone/image?font=Bitter&amp;forks=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
+
+<p id="description">Notion Clone: Your personal note-taking haven. With our intuitive editor jot down anything from ideas to reminders effortlessly. Seamlessly sync and access your notes using preview functionality of ours!</p>
 
 ## Getting Started
 
