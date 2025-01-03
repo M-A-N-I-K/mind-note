@@ -13,10 +13,10 @@ export const Heading = () => {
 		<div className="max-w-3xl space-y-4">
 			<h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
 				Your Ideas, Documents & Plans. Unified. Welcome to{" "}
-				<span className="underline">Notion</span>
+				<span className="underline">MindNote</span>
 			</h1>
 			<h3 className="text-base sm:text-xl md:text-2xl font-medium">
-				Notion is the connected workspace where <br /> better , faster and
+				MindNote is the connected workspace where <br /> better , faster and
 				smarter work happens.
 			</h3>
 			{isLoading && (
@@ -27,14 +27,14 @@ export const Heading = () => {
 			{isAuthenticated && !isLoading && (
 				<Button asChild>
 					<Link href="/documents">
-						Enter Notion <ArrowRight className="h-4 w-4 ml-4" />
+						Enter MindNote <ArrowRight className="h-4 w-4 ml-4" />
 					</Link>
 				</Button>
 			)}
 			{!isAuthenticated && !isLoading && (
 				<SignInButton mode="modal">
 					<Button>
-						Get Notion Free
+						Get MindNote Free
 						<ArrowRight className="h-4 w-4 ml-4" />
 					</Button>
 				</SignInButton>

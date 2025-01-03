@@ -21,7 +21,7 @@ export const Logo = () => {
 				width={40}
 				height={40}
 			/>
-			<p className={cn("font-semibold", font.className)}>Notion</p>
+			<p className={cn("font-semibold", font.className)}>MindNote</p>
 		</div>
 	);
 };

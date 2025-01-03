@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
+import { Brain } from "lucide-react";
 
 export const Navbar = () => {
 	const { isAuthenticated, isLoading } = useConvexAuth();
@@ -16,11 +17,14 @@ export const Navbar = () => {
 	return (
 		<div
 			className={cn(
-				"z-50 bg-background dark:bg-[#1F1F1F] fixed top-0 flex items-center w-full p-6",
+				"z-50 bg-background dark:bg-background-dark fixed top-0 flex items-center w-full p-6",
 				scrolled && "border-b shadow-sm"
 			)}
 		>
-			<Logo />
+			<div className="flex items-center space-x-2">
+				<Brain className="w-8 h-8 text-primary-600" />
+				<span className="text-xl font-bold">MindNote</span>
+			</div>
 			<div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
 				{isLoading && <Spinner />}
 				{!isAuthenticated && !isLoading && (
@@ -31,14 +35,16 @@ export const Navbar = () => {
 							</Button>
 						</SignInButton>
 						<SignInButton mode="modal">
-							<Button size="sm">Get Notion Free</Button>
+							<button className="bg-primary-600 px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors text-white">
+								Get Started
+							</button>
 						</SignInButton>
 					</>
 				)}
 				{isAuthenticated && !isLoading && (
 					<>
 						<Button variant="ghost" size="sm" asChild>
-							<Link href="/documents">Enter Notion</Link>
+							<Link href="/documents">Enter MindNote</Link>
 						</Button>
 						<UserButton afterSignOutUrl="/" />
 					</>

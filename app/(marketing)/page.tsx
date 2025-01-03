@@ -1,14 +1,15 @@
 import { Heading } from "./_components/heading";
 import { Heroes } from "./_components/heroes";
 import { Footer } from "./_components/footer";
+import { FeaturesGrid } from "./_components/features-grid";
+import { CTA } from "./_components/CTA";
 
 const MarketingPage = () => {
 	return (
-		<div className="min-h-full dark:bg-[#1F1F1F] flex flex-col">
-			<div className="flex flex-col items-center justify-center md:justify-start text-center flex-1 gap-y-8 px-6 pb-10">
-				<Heading />
-				<Heroes />
-			</div>
+		<div className="min-h-screen bg-background-light dark:bg-background-dark text-gray-900 dark:text-white transition-colors">
+			<Heroes />
+			<FeaturesGrid />
+			<CTA />
 			<Footer />
 		</div>
 	);

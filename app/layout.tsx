@@ -13,7 +13,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Notion",
+	title: "MindNote",
 	description: "Connected Workspace where everyone can collaborate.",
 	icons: {
 		icon: [
@@ -46,8 +46,8 @@ export default function RootLayout({
 				/>
 				<meta property="og:title" content="Link preview title" />
 				<meta property="og:image" content="Link preview image" />
-				<meta property="og:type" content="notion" />
-				<meta property="og:site_name" content="Notion Clone" />
+				<meta property="og:type" content="MindNote" />
+				<meta property="og:site_name" content="MindNote" />
 			</Head>
 			<body className={inter.className}>
 				<ConvexClientProvider>

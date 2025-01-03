@@ -55,7 +55,7 @@ export const SearchCommand = () => {
 
 	return (
 		<CommandDialog open={isOpen} onOpenChange={onClose}>
-			<CommandInput placeholder={`Search ${user?.firstName}'s Notion`} />
+			<CommandInput placeholder={`Search ${user?.firstName}'s MindNote`} />
 			<CommandList>
 				<CommandEmpty>No results found.</CommandEmpty>
 				<CommandGroup>
