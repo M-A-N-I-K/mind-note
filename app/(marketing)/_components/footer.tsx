@@ -4,19 +4,14 @@ import { Brain } from "lucide-react";
 
 export const Footer = () => {
 	return (
-		<div className="flex items-center w-full p-6 bg-background dark:bg-background-dark z-50">
-			<div className="flex items-center space-x-2">
-				<Brain className="w-6 h-6 text-primary-600" />
-				<span className="font-semibold">MindNote</span>
+		<footer className="dark:bg-surface-dark bg-surface-light text-muted-light dark:text-muted-dark py-6">
+			<div className="container mx-auto flex flex-col md:flex-row justify-center items-center px-4">
+				<Brain className="w-8 h-8 text-primary-600" />
+				<span className="font-semibold text-lg ml-2">MindNote</span>
 			</div>
-			<div className="flex md:justify-end justify-between items-center md:ml-auto w-full gap-x-2 text-muted-foreground">
-				<Button variant="ghost" size="sm">
-					Privacy Policy
-				</Button>
-				<Button variant="ghost" size="sm">
-					Terms & Conditions
-				</Button>
+			<div className="text-center mt-4 text-sm text-muted-foreground">
+				&copy; {new Date().getFullYear()} MindNote. All rights reserved.
 			</div>
-		</div>
+		</footer>
 	);
 };
