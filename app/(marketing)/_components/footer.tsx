@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Logo } from "./logo";
 import { Brain } from "lucide-react";
 
 export const Footer = () => {
